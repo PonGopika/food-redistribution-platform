@@ -1,0 +1,147 @@
+/* ========================================
+   NGO DASHBOARD STYLES
+   ======================================== */
+
+.ngo-dashboard {
+    animation: fadeIn 0.5s ease;
+}
+
+.ngo-hero-card {
+    background: linear-gradient(135deg, var(--success-500) 0%, var(--primary-600) 100%);
+    color: white;
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-6);
+    position: relative;
+    overflow: hidden;
+}
+
+.ngo-hero-card::before {
+    content: '🏠';
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+    font-size: 200px;
+    opacity: 0.1;
+}
+
+.ngo-hero-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.ngo-hero-subtitle {
+    opacity: 0.9;
+    margin-bottom: var(--space-4);
+}
+
+.ngo-hero-stats {
+    display: flex;
+    gap: var(--space-8);
+}
+
+.ngo-hero-stat {
+    text-align: center;
+}
+
+.ngo-hero-stat-value {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+}
+
+.ngo-hero-stat-label {
+    font-size: var(--font-size-sm);
+    opacity: 0.85;
+}
+
+/* Incoming Deliveries */
+.ngo-delivery-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--primary-500);
+    margin-bottom: var(--space-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+    transition: all var(--transition-base);
+}
+
+.ngo-delivery-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateX(4px);
+}
+
+.ngo-delivery-info {
+    flex: 1;
+}
+
+.ngo-delivery-title {
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: var(--space-1);
+}
+
+.ngo-delivery-meta {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    display: flex;
+    gap: var(--space-4);
+}
+
+.ngo-delivery-eta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: var(--success-100);
+    color: var(--success-700);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+/* Quick Actions Grid */
+.ngo-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.ngo-action-btn {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid transparent;
+}
+
+.ngo-action-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-200);
+}
+
+.ngo-action-icon {
+    font-size: 32px;
+    margin-bottom: var(--space-2);
+}
+
+.ngo-action-label {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--gray-700);
+}
+
+.ngo-action-count {
+    font-size: var(--font-size-xs);
+    color: var(--gray-400);
+    margin-top: var(--space-1);
+}

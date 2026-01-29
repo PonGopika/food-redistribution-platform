@@ -1,0 +1,188 @@
+/* ========================================
+   NEARBY FOOD PAGE STYLES
+   ======================================== */
+
+.nearby-food-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.nearby-food-filters {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    flex-wrap: wrap;
+}
+
+.nearby-food-filter {
+    flex: 1;
+    min-width: 200px;
+}
+
+.nearby-food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-5);
+}
+
+.nearby-food-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid var(--gray-100);
+}
+
+.nearby-food-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.nearby-food-image {
+    height: 160px;
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    position: relative;
+}
+
+.nearby-food-dietary {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nearby-food-dietary.veg {
+    background: var(--success-500);
+    color: white;
+}
+
+.nearby-food-dietary.non-veg {
+    background: var(--danger-500);
+    color: white;
+}
+
+.nearby-food-dietary.vegan {
+    background: var(--primary-600);
+    color: white;
+}
+
+.nearby-food-body {
+    padding: var(--space-5);
+}
+
+.nearby-food-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-3);
+}
+
+.nearby-food-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.nearby-food-distance {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.nearby-food-meta {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.nearby-food-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.nearby-food-donor {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-4);
+}
+
+.nearby-food-donor-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--primary-700);
+}
+
+.nearby-food-donor-name {
+    font-weight: 500;
+}
+
+.nearby-food-donor-rating {
+    font-size: var(--font-size-sm);
+    color: var(--secondary-500);
+}
+
+.nearby-food-countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+}
+
+.nearby-food-countdown.safe {
+    background: var(--success-100);
+    color: var(--success-700);
+}
+
+.nearby-food-countdown.warning {
+    background: var(--warning-100);
+    color: var(--warning-700);
+}
+
+.nearby-food-countdown.urgent {
+    background: var(--danger-100);
+    color: var(--danger-700);
+    animation: pulse 1.5s infinite;
+}
+
+.nearby-food-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.nearby-food-actions .btn {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .nearby-food-grid {
+        grid-template-columns: 1fr;
+    }
+}

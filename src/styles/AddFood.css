@@ -1,0 +1,266 @@
+/* ========================================
+   ADD FOOD PAGE STYLES
+   ======================================== */
+
+.add-food-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.add-food-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+    position: relative;
+}
+
+.add-food-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    flex: 1;
+    position: relative;
+}
+
+.add-food-step::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    right: -50%;
+    height: 2px;
+    background: var(--gray-200);
+    z-index: 0;
+}
+
+.add-food-step:last-child::before {
+    display: none;
+}
+
+.add-food-step.completed::before {
+    background: var(--success-500);
+}
+
+.add-food-step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    z-index: 1;
+    transition: all var(--transition-base);
+}
+
+.add-food-step-number.completed {
+    background: var(--success-500);
+    color: white;
+}
+
+.add-food-step-number.active {
+    background: var(--primary-500);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+.add-food-step-number.pending {
+    background: var(--gray-100);
+    color: var(--gray-400);
+    border: 2px solid var(--gray-200);
+}
+
+.add-food-step-label {
+    font-size: var(--font-size-xs);
+    color: var(--gray-400);
+    text-align: center;
+}
+
+.add-food-step-label.active {
+    color: var(--gray-800);
+    font-weight: 500;
+}
+
+/* Category Grid */
+.add-food-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: var(--space-3);
+}
+
+.add-food-category {
+    padding: var(--space-4);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    background: white;
+}
+
+.add-food-category:hover {
+    border-color: var(--primary-300);
+    background: var(--primary-50);
+}
+
+.add-food-category.selected {
+    border-color: var(--primary-500);
+    background: var(--primary-50);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.add-food-category-icon {
+    font-size: 32px;
+    margin-bottom: var(--space-2);
+}
+
+.add-food-category-name {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--gray-700);
+}
+
+.add-food-category-desc {
+    font-size: var(--font-size-xs);
+    color: var(--gray-400);
+}
+
+/* Dietary Type Selection */
+.add-food-dietary {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.add-food-dietary-option {
+    flex: 1;
+    padding: var(--space-4);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.add-food-dietary-option.selected {
+    border-color: var(--primary-500);
+    background: var(--primary-50);
+}
+
+/* Allergen Tags */
+.add-food-allergens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.add-food-allergen {
+    padding: var(--space-2) var(--space-4);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.add-food-allergen:hover {
+    border-color: var(--warning-400);
+}
+
+.add-food-allergen.selected {
+    background: var(--warning-100);
+    border-color: var(--warning-500);
+    color: var(--warning-700);
+}
+
+/* Hygiene Checklist */
+.add-food-checklist {
+    background: var(--gray-50);
+    border-radius: var(--radius-xl);
+    padding: var(--space-4);
+}
+
+.add-food-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--gray-200);
+    transition: background var(--transition-fast);
+}
+
+.add-food-checklist-item:last-child {
+    border-bottom: none;
+}
+
+.add-food-checklist-item:hover {
+    background: var(--gray-100);
+    border-radius: var(--radius-lg);
+}
+
+.add-food-checklist-icon {
+    font-size: 24px;
+}
+
+.add-food-checklist-text {
+    flex: 1;
+}
+
+.add-food-checklist-text.checked {
+    text-decoration: line-through;
+    color: var(--gray-400);
+}
+
+/* Review Summary */
+.add-food-review {
+    display: grid;
+    gap: var(--space-4);
+}
+
+.add-food-review-section {
+    background: var(--gray-50);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+}
+
+.add-food-review-title {
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-lg);
+}
+
+.add-food-review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+}
+
+.add-food-review-item {
+    font-size: var(--font-size-sm);
+}
+
+.add-food-review-label {
+    color: var(--gray-500);
+}
+
+.add-food-review-value {
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+@media (max-width: 600px) {
+    .add-food-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .add-food-dietary {
+        flex-direction: column;
+    }
+
+    .add-food-review-grid {
+        grid-template-columns: 1fr;
+    }
+}

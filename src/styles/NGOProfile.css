@@ -1,0 +1,202 @@
+/* ========================================
+   NGO PROFILE PAGE STYLES
+   ======================================== */
+
+.ngo-profile-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.ngo-profile-header {
+    background: linear-gradient(135deg, var(--success-500) 0%, var(--primary-700) 100%);
+    color: white;
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.ngo-profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.ngo-profile-info h2 {
+    color: white;
+    margin-bottom: var(--space-1);
+}
+
+.ngo-profile-info p {
+    opacity: 0.9;
+}
+
+/* Storage Capacity Section */
+.ngo-storage-section {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin-bottom: var(--space-4);
+    box-shadow: var(--shadow-md);
+}
+
+.ngo-storage-title {
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.ngo-storage-sliders {
+    display: grid;
+    gap: var(--space-6);
+}
+
+.ngo-slider-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.ngo-slider-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.ngo-slider-icon.cold {
+    background: var(--info-100);
+}
+
+.ngo-slider-icon.ambient {
+    background: var(--warning-100);
+}
+
+.ngo-slider-icon.frozen {
+    background: var(--accent-100);
+}
+
+.ngo-slider-content {
+    flex: 1;
+}
+
+.ngo-slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2);
+}
+
+.ngo-slider-label {
+    font-weight: 500;
+}
+
+.ngo-slider-value {
+    font-weight: 600;
+    color: var(--primary-600);
+}
+
+.ngo-slider-input {
+    width: 100%;
+    height: 8px;
+    border-radius: var(--radius-full);
+    appearance: none;
+    background: var(--gray-200);
+    outline: none;
+}
+
+.ngo-slider-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    background: var(--primary-500);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+}
+
+/* Dietary Preferences */
+.ngo-dietary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-3);
+}
+
+.ngo-dietary-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.ngo-dietary-item:hover {
+    border-color: var(--primary-300);
+}
+
+.ngo-dietary-item.selected {
+    border-color: var(--primary-500);
+    background: var(--primary-50);
+}
+
+.ngo-dietary-icon {
+    font-size: 24px;
+}
+
+.ngo-dietary-label {
+    font-weight: 500;
+}
+
+/* Service Area */
+.ngo-service-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-4);
+}
+
+.ngo-radius-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-100);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+}
+
+.ngo-radius-value {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--primary-600);
+}
+
+.ngo-radius-label {
+    color: var(--gray-500);
+}
+
+@media (max-width: 600px) {
+    .ngo-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ngo-service-area {
+        grid-template-columns: 1fr;
+    }
+}
