@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -27,3 +28,12 @@ dist-ssr
 node_modules
 dist
 .env
+=======
+# backend
+backend/node_modules/
+backend/debug_*.txt
+backend/debug_*.js
+/node_modules/
+client/node_modules/
+
+>>>>>>> 80fd6fbc26856ce9c71394c1bed1e55efb8d8859

@@ -1,0 +1,180 @@
+/* ========================================
+   ACCEPTED FOOD PAGE STYLES
+   ======================================== */
+
+.accepted-food-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.accepted-food-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    gap: var(--space-5);
+    transition: all var(--transition-base);
+}
+
+.accepted-food-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.accepted-food-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, var(--primary-100) 0%, var(--primary-200) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.accepted-food-content {
+    flex: 1;
+}
+
+.accepted-food-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-2);
+}
+
+.accepted-food-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.accepted-food-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    margin-bottom: var(--space-3);
+}
+
+/* Delivery Progress */
+.accepted-food-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.accepted-food-progress-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--font-size-sm);
+}
+
+.accepted-food-progress-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.accepted-food-progress-dot.completed {
+    background: var(--success-500);
+    color: white;
+}
+
+.accepted-food-progress-dot.active {
+    background: var(--primary-500);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.accepted-food-progress-dot.pending {
+    background: var(--gray-200);
+    color: var(--gray-400);
+}
+
+.accepted-food-progress-line {
+    width: 24px;
+    height: 2px;
+    background: var(--gray-200);
+}
+
+.accepted-food-progress-line.completed {
+    background: var(--success-500);
+}
+
+/* Volunteer Info */
+.accepted-food-volunteer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-3);
+}
+
+.accepted-food-volunteer-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-600) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.accepted-food-volunteer-info {
+    flex: 1;
+}
+
+.accepted-food-volunteer-name {
+    font-weight: 600;
+}
+
+.accepted-food-volunteer-status {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+}
+
+.accepted-food-volunteer-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+/* Rating Modal */
+.rating-modal-stars {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    margin: var(--space-6) 0;
+}
+
+.rating-star {
+    font-size: 36px;
+    color: var(--gray-300);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.rating-star:hover,
+.rating-star.active {
+    color: var(--secondary-400);
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .accepted-food-card {
+        flex-direction: column;
+    }
+
+    .accepted-food-icon {
+        width: 100%;
+        height: 120px;
+    }
+}

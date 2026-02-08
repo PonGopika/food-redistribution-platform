@@ -1,0 +1,239 @@
+/* ========================================
+   REGISTER PAGE STYLES
+   ======================================== */
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: var(--space-6);
+}
+
+.register-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.register-card {
+    background: white;
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-xl);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.register-logo {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-600);
+    margin-bottom: var(--space-4);
+}
+
+.register-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--space-2);
+}
+
+.register-subtitle {
+    color: var(--gray-500);
+}
+
+/* Progress Steps */
+.register-steps {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-8);
+}
+
+.register-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.register-step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+}
+
+.register-step-number.completed {
+    background: var(--success-500);
+    color: white;
+}
+
+.register-step-number.active {
+    background: var(--primary-500);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+.register-step-number.pending {
+    background: var(--gray-200);
+    color: var(--gray-500);
+}
+
+.register-step-label {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+}
+
+.register-step-label.active {
+    color: var(--gray-800);
+    font-weight: 500;
+}
+
+.register-step-line {
+    width: 40px;
+    height: 2px;
+    background: var(--gray-200);
+}
+
+.register-step-line.completed {
+    background: var(--success-500);
+}
+
+/* Form Grid */
+.register-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+.register-form-full {
+    grid-column: span 2;
+}
+
+/* Role Selection */
+.register-roles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.register-role {
+    padding: var(--space-4);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+.register-role:hover {
+    border-color: var(--primary-300);
+    background: var(--gray-50);
+}
+
+.register-role.selected {
+    border-color: var(--primary-500);
+    background: var(--primary-50);
+}
+
+.register-role-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.register-role-content {
+    flex: 1;
+}
+
+.register-role-title {
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: var(--space-1);
+}
+
+.register-role-desc {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+}
+
+.register-role-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+}
+
+.register-role-feature {
+    font-size: var(--font-size-xs);
+    background: var(--gray-100);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-md);
+    color: var(--gray-600);
+}
+
+/* Password Strength */
+.password-strength {
+    margin-top: var(--space-2);
+}
+
+.password-strength-bar {
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.password-strength-fill {
+    height: 100%;
+    transition: all var(--transition-fast);
+}
+
+.password-strength-label {
+    font-size: var(--font-size-xs);
+    margin-top: var(--space-1);
+}
+
+/* Actions */
+.register-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--gray-100);
+}
+
+.register-login {
+    text-align: center;
+    margin-top: var(--space-6);
+    color: var(--gray-600);
+}
+
+.register-login a {
+    color: var(--primary-600);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .register-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .register-form-full {
+        grid-column: span 1;
+    }
+
+    .register-steps {
+        flex-wrap: wrap;
+    }
+}

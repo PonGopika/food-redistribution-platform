@@ -1,0 +1,168 @@
+/* ========================================
+   DONOR VERIFICATION PAGE STYLES
+   ======================================== */
+
+.verification-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.verification-status-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-6);
+    text-align: center;
+}
+
+.verification-status-card.verified {
+    background: linear-gradient(135deg, var(--success-50) 0%, var(--success-100) 100%);
+    border: 2px solid var(--success-200);
+}
+
+.verification-status-card.pending {
+    background: linear-gradient(135deg, var(--warning-50) 0%, var(--warning-100) 100%);
+    border: 2px solid var(--warning-200);
+}
+
+.verification-status-card.not-started {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    border: 2px solid var(--gray-200);
+}
+
+.verification-status-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto var(--space-4);
+}
+
+.verification-status-icon.verified {
+    background: var(--success-100);
+}
+
+.verification-status-icon.pending {
+    background: var(--warning-100);
+}
+
+.verification-status-icon.not-started {
+    background: var(--gray-200);
+}
+
+.verification-status-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.verification-status-text {
+    color: var(--gray-600);
+}
+
+/* Document Upload Cards */
+.verification-docs {
+    display: grid;
+    gap: var(--space-4);
+}
+
+.verification-doc {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    border: 2px dashed var(--gray-200);
+    transition: all var(--transition-fast);
+}
+
+.verification-doc:hover {
+    border-color: var(--primary-300);
+}
+
+.verification-doc.uploaded {
+    border-style: solid;
+    border-color: var(--success-300);
+    background: var(--success-50);
+}
+
+.verification-doc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+}
+
+.verification-doc-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.verification-doc-required {
+    color: var(--danger-500);
+    font-size: var(--font-size-sm);
+}
+
+.verification-doc-desc {
+    color: var(--gray-500);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-4);
+}
+
+.verification-doc-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+    border: 2px dashed var(--gray-300);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    background: var(--gray-50);
+}
+
+.verification-doc-upload:hover {
+    border-color: var(--primary-500);
+    background: var(--primary-50);
+}
+
+.verification-doc-upload-icon {
+    font-size: 32px;
+    margin-right: var(--space-3);
+}
+
+/* Benefits Section */
+.verification-benefits {
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+.verification-benefits-title {
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.verification-benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+}
+
+.verification-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-size: var(--font-size-sm);
+}
+
+.verification-benefit-icon {
+    color: var(--success-500);
+    font-size: 18px;
+    flex-shrink: 0;
+}

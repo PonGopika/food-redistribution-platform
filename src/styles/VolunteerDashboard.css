@@ -1,0 +1,245 @@
+/* ========================================
+   VOLUNTEER DASHBOARD STYLES
+   ======================================== */
+
+.volunteer-dashboard {
+    animation: fadeIn 0.5s ease;
+}
+
+.volunteer-hero-card {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--accent-700) 100%);
+    color: white;
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-6);
+    position: relative;
+    overflow: hidden;
+}
+
+.volunteer-hero-card::before {
+    content: '🚴';
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    font-size: 150px;
+    opacity: 0.15;
+}
+
+.volunteer-hero-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.volunteer-hero-subtitle {
+    opacity: 0.9;
+    margin-bottom: var(--space-4);
+}
+
+.volunteer-hero-stats {
+    display: flex;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+}
+
+.volunteer-hero-stat {
+    text-align: center;
+    min-width: 80px;
+}
+
+.volunteer-hero-stat-value {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+}
+
+.volunteer-hero-stat-label {
+    font-size: var(--font-size-sm);
+    opacity: 0.85;
+}
+
+/* Active Task Alert */
+.volunteer-active-task {
+    background: linear-gradient(135deg, var(--warning-50) 0%, var(--warning-100) 100%);
+    border: 2px solid var(--warning-300);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    animation: pulse 3s infinite;
+}
+
+.volunteer-active-task-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    background: var(--warning-500);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.volunteer-active-task-content {
+    flex: 1;
+}
+
+.volunteer-active-task-title {
+    font-weight: 600;
+    color: var(--warning-700);
+    margin-bottom: var(--space-1);
+}
+
+.volunteer-active-task-route {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+/* Quick Actions */
+.volunteer-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.volunteer-action-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.volunteer-action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-200);
+}
+
+.volunteer-action-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    background: var(--danger-500);
+    color: white;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volunteer-action-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto var(--space-3);
+}
+
+.volunteer-action-icon.blue {
+    background: linear-gradient(135deg, var(--accent-100) 0%, var(--accent-200) 100%);
+}
+
+.volunteer-action-icon.green {
+    background: linear-gradient(135deg, var(--success-100) 0%, var(--success-200) 100%);
+}
+
+.volunteer-action-icon.gold {
+    background: linear-gradient(135deg, var(--secondary-100) 0%, var(--secondary-200) 100%);
+}
+
+.volunteer-action-icon.purple {
+    background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+}
+
+.volunteer-action-label {
+    font-weight: 600;
+    color: var(--gray-800);
+    font-size: var(--font-size-sm);
+}
+
+/* Activity Feed */
+.volunteer-activity-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+}
+
+.volunteer-activity-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.volunteer-activity-item {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    transition: background var(--transition-fast);
+}
+
+.volunteer-activity-item:hover {
+    background: var(--gray-50);
+}
+
+.volunteer-activity-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.volunteer-activity-dot.success {
+    background: var(--success-500);
+}
+
+.volunteer-activity-dot.primary {
+    background: var(--primary-500);
+}
+
+.volunteer-activity-dot.warning {
+    background: var(--warning-500);
+}
+
+.volunteer-activity-text {
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.volunteer-activity-time {
+    font-size: var(--font-size-sm);
+    color: var(--gray-400);
+}
+
+@media (max-width: 768px) {
+    .volunteer-hero-card::before {
+        font-size: 100px;
+        right: -20px;
+    }
+
+    .volunteer-hero-stats {
+        gap: var(--space-4);
+    }
+}
