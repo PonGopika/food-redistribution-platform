@@ -26,6 +26,8 @@ const Register = () => {
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
+      <input placeholder="Fridge Capacity (kg)" />
+      <input placeholder="Dry Storage Capacity (kg)" />
 
       <button type="submit">Register</button>
     </form>
