@@ -5,7 +5,7 @@ const StarRating = () => {
 
   return (
     <div>
-      {[1,2,3,4,5].map((n) => (
+      {[1, 2, 3, 4, 5].map((n) => (
         <span key={n} onClick={() => setRating(n)}>
           {n <= rating ? "★" : "☆"}
         </span>

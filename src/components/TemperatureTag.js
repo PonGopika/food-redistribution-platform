@@ -1,8 +1,8 @@
 import React from "react";
 
-const TemperatureTag = ({ temp, setTemp }) => {
+const TemperatureTag = ({ value, setValue }) => {
   return (
-    <select value={temp} onChange={(e) => setTemp(e.target.value)}>
+    <select value={value} onChange={(e) => setValue(e.target.value)}>
       <option value="Hot">Hot</option>
       <option value="Cold">Cold</option>
     </select>
