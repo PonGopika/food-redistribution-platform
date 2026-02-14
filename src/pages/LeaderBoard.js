@@ -1,7 +1,7 @@
 import React from "react";
 
 const Leaderboard = () => {
-  return <h2>Top Donors</h2>;
+  return <h2>Top Donors Leaderboard</h2>;
 };
 
 export default Leaderboard;
